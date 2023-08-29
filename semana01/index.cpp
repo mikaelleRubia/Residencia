@@ -4,12 +4,13 @@
 
 using namespace std;
 
-int main(int argc, char *argv[]) {
+int main() {
     string nome;
     int idade;
 
     cout << "Digite seu nome: ";
     cin >> nome;
+
 
     cout << "Digite sua idade: ";
     cin >> idade;
