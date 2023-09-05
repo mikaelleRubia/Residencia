@@ -1,35 +1,25 @@
 #include <iostream>
-#include <cctype>
+#include <string>
 
 using namespace std;
 
-
-int main(int argc, char *argv[])
-{
-
+int main(int argc, char* argv[]){
+    
     string str;
 
     str.append(argv[1]);
 
-    if (argc == 1)
-    {
-        cout << "Sem argumento, por favor verifique se os argumentos foram passados \n";
+    if (argc != 4){
+        cout << "Argumentos inválidos!" << endl;
+    } else {
+        if (str == "\\int"){
+            int resultado = atoi(argv[2]) / atoi(argv[3]);
+            cout << "O resultado da divisão de inteiros é: " << resultado << endl;
+        } else if (str == "\\double"){
+            double resultado = atof(argv[2]) / atof(argv[3]);
+            cout << "O resultado da divisão de reais é: " << resultado << endl;
+        }
     }
-    else if(argc == 3)
-    {
-        cout << "por favor verifique se os argumentos foram passados , vc passou argumentos a mais, só precisamos do seu n\n";
-    }
-    else if(str == "\\int"){      
-        int resultado_int = atoi(argv[2]) / atoi(argv[3]);
-        cout << "resultado" << resultado_int  << endl;
-
-    }
-    else if(str == "\\double"){
-         double resultado_dou = atof(argv[2]) / atof(argv[3]);
-        cout << "resultado" << resultado_dou  << endl;
-
-    }
-
 
     return 0;
 }
